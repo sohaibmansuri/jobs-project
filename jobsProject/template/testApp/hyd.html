@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Hydrabad Jobs information</h1>
+    <hr>
+  {% if hyd_data %}
+    <table>
+      <thead>
+        <th>date</th>
+        <th>company</th>
+        <th>title</th>
+        <th>eligibility</th>
+        <th>address</th>
+        <th>email</th>
+        <th>phonenumber</th>
+      </thead>
+      {% for emp in hyd_data %}
+      <tr>
+        <td>{{emp.date}}</td>
+        <td>{{emp.company}}</td>
+        <td>{{emp.title}}</td>
+        <td>{{emp.eligibility}}</td>
+        <td>{{emp.address}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.phonenumber}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% endif %}
+  </body>
+</html>
